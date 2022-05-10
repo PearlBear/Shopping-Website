@@ -1,0 +1,63 @@
+@import "media";
+
+$cols : 12;
+$gutter: 16px; //khoảng cách giữa các cột với nhau
+
+.row {
+    display: flex;
+
+    flex-wrap: wrap;
+    //margin: 0 -$gutter / 2;
+
+    //tất cả những class bắt đầu bằng col-
+    [class^="col-"] {
+
+        // padding: $gutter / 2;
+    }
+
+    @include xs {
+        @for $i from 1 through $cols {
+            .col-xs-#{$i} {
+                width: (100% / $cols)* $i;
+            }
+        }
+    }
+
+
+    @include sm {
+
+        @for $i from 1 through $cols {
+            .col-sm-#{$i} {
+                width: (100% / $cols)* $i;
+            }
+        }
+    }
+
+    @include md {
+
+        @for $i from 1 through $cols {
+            .col-md-#{$i} {
+                width: (100% / $cols)* $i;
+            }
+        }
+    }
+
+
+    @include lg {
+
+        @for $i from 1 through $cols {
+            .col-lg-#{$i} {
+                width: (100% / $cols)* $i;
+            }
+        }
+    }
+
+    @include xl {
+
+        @for $i from 1 through $cols {
+            .col-xl-#{$i} {
+                width: (100% / $cols)* $i;
+            }
+        }
+    }
+}
